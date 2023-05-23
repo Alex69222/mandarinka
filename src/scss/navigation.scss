@@ -1,0 +1,186 @@
+.navigation {
+  height: 108px;
+  display: flex;
+  align-items: center;
+  @media(max-width: 767px) {
+    height: 60px;
+  }
+
+  .nav-container {
+    .logo {
+      max-width: 100%;
+      @media(max-width: 767px) {
+        height: 50px;
+      }
+
+    }
+
+    .nav-row {
+      align-items: center;
+      flex-wrap: nowrap;
+      .call {
+        width: max-content;
+
+        .phone {
+          font-weight: 700;
+          @media(min-width: 1400px) {
+            font-size: 22px;
+          }
+          @media(min-width: 1200px) {
+            font-size: 18px;
+          }
+        }
+
+        &:hover {
+          svg circle {
+            fill: #5A941FFF;
+          }
+        }
+
+      }
+      .burger {
+        cursor: pointer;
+        position: relative;
+        width: 25px;
+        height: 20px;
+
+        .line {
+          transition: 0.3s;
+          position: absolute;
+          border-radius: 8px;
+          height: 4px;
+          width: 100%;
+          background-color: #1D1D1D;
+          left: 0;
+
+          &:nth-child(1) {
+            top: 0;
+          }
+
+          &:nth-child(2) {
+            top: calc(50% - 2px);
+          }
+
+          &:nth-child(3) {
+            bottom: 0;
+          }
+        }
+        &.close{
+          .line{
+            background-color: white;
+            &:nth-child(1) {
+              transform: rotate(36deg);
+              transform-origin: left;
+              width: 112%;
+            }
+            &:nth-child(2) {
+              top: initial;
+              bottom: 0;
+              transform: rotate(-35deg);
+              transform-origin: left;
+              width: 112%;
+            }
+          }
+          &:hover{
+            .line{
+              background-color: $orange;
+            }
+          }
+        }
+      }
+      .nav-list {
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+        .nav-item {
+          display: flex;
+          align-items: center;
+          text-transform: uppercase;
+
+
+          &:not(:first-child) {
+            margin-left: 15px;
+          }
+
+          &:not(:last-child) {
+            margin-right: 15px;
+          }
+
+          .nav-link {
+            position: relative;
+            z-index: 1;
+            transition: 0.3s;
+
+            &:hover {
+              color: $blue;
+            }
+
+            &.nav-link-active {
+              &::before {
+                transition: 0.3s;
+                content: '';
+                position: absolute;
+                z-index: 1;
+                display: block;
+                left: 0;
+                right: 0;
+                bottom: -5px;
+                height: 2px;
+                width: 100%;
+                background-color: $orange;
+              }
+            }
+          }
+        }
+        @media(max-width: 991px) {
+          //display: none;
+          opacity: 0;
+          padding-top: 25px;
+          padding-right: 15px;
+          z-index: 3;
+          position: fixed;
+          top: 0;
+          right: -100%;
+          bottom: 0;
+          flex-direction: column;
+          align-items: flex-end;
+          background-color: rgba(black, 0.8);
+          .nav-item {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 25px;
+            &:not(:first-child) {
+              margin-left: 0;
+            }
+
+            &:not(:last-child) {
+              margin-right: 0;
+            }
+            .nav-link{
+              &:hover {
+                color: $orange;
+              }
+              &.nav-link-active {
+                &::before {
+                  background-color: white;
+                  bottom: -2px;
+                }
+                &:hover {
+                  &::before {
+                    background-color: $orange;
+                  }
+                }
+              }
+            }
+          }
+          &.active{
+            //display: flex;
+            right: 0;
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}

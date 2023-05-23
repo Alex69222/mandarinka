@@ -1,0 +1,117 @@
+html {
+  box-sizing: border-box;
+  color: #000;
+  scroll-behavior: smooth;
+  body, ol, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+ body{
+   font-size: 16px;
+   font-weight: 400;
+   font-family: Roboto, sans-serif;
+   background-image: url('../img/bg.png');
+   background-size: contain;
+   background-repeat: repeat;
+   position: relative;
+   overflow-x: hidden;
+ }
+  &::-webkit-scrollbar {
+    width: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $blue;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: OpenSansCondensed, sans-serif;
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  background-color: white;
+  padding: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+input, input:focus-visible{
+  border-color: transparent;
+  outline: none;
+}
+.h1 {
+  font-size: 60px;
+  @media(max-width: 991px){
+    font-size: 50px;
+  }
+  @media(max-width: 576px){
+    font-size: 36px;
+  }
+}
+
+.h2,.h3 {
+  color: $blue;
+
+}
+
+.h2 {
+  font-size: 47px;
+  @media(max-width: 991px){
+    font-size: 40px;
+  }
+}
+
+.h3 {
+  font-size: 32px;
+
+  @media(max-width: 576px){
+    font-size: 25px;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+a.underline{
+  text-decoration: underline;
+}

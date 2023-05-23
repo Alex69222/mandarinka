@@ -1,0 +1,74 @@
+#contacts {
+  margin-top: 80px;
+
+  .info {
+    .title {
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .desc {
+      font-size: 20px;
+    }
+  }
+
+  .contacts-top {
+    .info {
+      position: relative;
+      padding-left: 50px;
+
+      .svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &:not(:first-child) {
+        margin-top: 40px;
+      }
+    }
+  }
+  .contracts-bottom{
+    margin-top: 140px;
+    display: flex;
+    .info{
+      &:not(:first-child){
+        margin-left: 20px;
+      }
+    }
+  }
+  .map{
+    height: 490px;
+  }
+  @media(max-width: 576px){
+    .map{
+      height: 260px;
+    }
+    .contacts-top {
+      margin-top: 30px;
+      padding-left: 15px;
+      .info {
+        .title {
+          font-size: 19px;
+          font-weight: 500;
+        }
+
+        .desc {
+          font-size: 17px;
+        }
+      }
+    }
+    .contracts-bottom{
+     flex-wrap: wrap;
+      margin-top: 50px;
+      padding-left: 15px;
+      .info{
+        &:not(:first-child){
+          margin-top: 15px;
+          margin-left: 0;
+        }
+      }
+    }
+
+  }
+}

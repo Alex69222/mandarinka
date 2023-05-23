@@ -1,0 +1,48 @@
+.banner {
+  z-index: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    position: absolute;
+    z-index: 2;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .container {
+    position: relative;
+    z-index: 3;
+    padding-top: 110px;
+    padding-bottom: 150px;
+  }
+
+  .h1 {
+    color: white;
+  }
+  @media(max-width: 576px){
+    height: 100vh;
+    .h1{
+      text-align: center;
+    }
+  }
+}
+
+#buttons-container {
+  z-index: 2;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  @media(max-width: 961px){
+    .svg{
+      height: 68px;
+      width: 68px;
+    }
+  }
+}

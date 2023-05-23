@@ -1,0 +1,28 @@
+.svg {
+  circle,path {
+    transition: 0.3s;
+  }
+
+  &.call {
+    circle {
+      fill: #4DBA80;
+    }
+
+    &:hover {
+      circle {
+        fill: #5A941FFF;
+      }
+    }
+  }
+
+  &.doc {
+    circle {
+      fill: #7EA7D2;
+    }
+    &:hover {
+      circle {
+        fill: #167BA4FF;
+      }
+    }
+  }
+}

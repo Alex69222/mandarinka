@@ -1,0 +1,61 @@
+#advantages {
+  margin-top: 65px;
+}
+
+.advantage-card {
+  transition: 0.3s;
+  padding: 28px;
+  border-radius: 8px;
+  border: 1px solid #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
+  height: 100%;
+  //margin: 0 15px;
+  background-color: white;
+
+  .img-container {
+    .img {
+      height: 100px;
+    }
+  }
+
+
+  .info-container {
+    .title {
+      margin-top: 23px;
+      font-weight: 700;
+    }
+
+    .desc {
+      font-weight: 200;
+    }
+  }
+
+
+  &:hover {
+    box-shadow: 0px 24px 42px rgba(0, 0, 0, 0.05);
+  }
+  @media(max-width: 576px){
+    font-size: 17px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 15px;
+    text-align: left;
+    flex-direction: row;
+    .img-container {
+      flex-shrink: 0;
+      width: 70px;
+      .img{
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .info-container{
+      margin-left: 20px;
+    }
+  }
+
+}
