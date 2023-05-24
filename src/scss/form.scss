@@ -4,7 +4,9 @@
   padding: 40px 80px 0 80px;
   border-radius: 2px;
   text-align: center;
-
+.h3{
+  font-family: 'Roboto', sans-serif;
+}
   .desc{
     font-size: 20px;
   }
@@ -17,6 +19,7 @@
       right: 0;
       bottom: 0;
       max-height: 120%;
+      max-width: initial;
     }
   }
   .agreement-block{
@@ -38,8 +41,14 @@
     }
   }
   @media(max-width: 576px){
+    background-color: #F9F9F9 ;
     padding-left: 15px;
     padding-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    max-width: calc(100% - 30px);
+    border: 1px solid #EBEBEB;
+    border-radius: 6px;
     .desc{
       font-size: 17px;
     }

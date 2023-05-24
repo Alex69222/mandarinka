@@ -37,3 +37,9 @@
 .mb-40{
   margin-bottom: 40px;
 }
+
+@media(max-width: 576px){
+  .mb-xs-10{
+    margin-bottom: 10px;
+  }
+}

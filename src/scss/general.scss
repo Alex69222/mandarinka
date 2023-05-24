@@ -62,6 +62,9 @@ input, input:focus-visible{
   border-color: transparent;
   outline: none;
 }
+img{
+  max-width: 100%;
+}
 .h1 {
   font-size: 60px;
   @media(max-width: 991px){

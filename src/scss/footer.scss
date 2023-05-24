@@ -89,5 +89,29 @@
   @media(max-width: 576px){
     margin-top: 65px;
     padding: 30px;
+    .footer-call-1{
+      order:1;
+    }
+    .footer-call-2{
+      order:3;
+    }
+    .footer-call-3{
+      order:2;
+    }
+
+    .footer-info {
+      font-size: 12px;
+      &.big {
+        font-size: 14px;
+      }
+    }
+    .footer-big-btn{
+      font-size: 14px;
+      padding: 14px 14px;
+      .svg{
+        height: 32px;
+        width: 32px;
+      }
+    }
   }
 }

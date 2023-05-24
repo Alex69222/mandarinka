@@ -1,6 +1,7 @@
 #assortment{
   position: relative;
   z-index: 1;
+  margin-top: 40px;
 }
 .assort-card {
   background-color: #F9F9F9;
@@ -31,8 +32,9 @@
     }
   }
   @media(max-width: 576px){
+    padding: 8px;
     .img{
-      min-height: 180px;
+      min-height: 130px;
     }
     .title{
       font-size: 14px;

@@ -68,6 +68,24 @@
           margin-left: 0;
         }
       }
+      @media(max-width: 576px){
+
+        .info{
+          width: 100%;
+          &:not(:first-child){
+            margin-top: 15px;
+            margin-left: 0;
+          }
+          .title {
+            font-size: 20px;
+            font-weight: 500;
+          }
+
+          .desc {
+            font-size: 18px;
+          }
+        }
+      }
     }
 
   }
